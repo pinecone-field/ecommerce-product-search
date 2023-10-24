@@ -19,9 +19,13 @@ The following technologies were used to build this demo
 
 ## Overview
 
-### Semantic Search
+### Architecture - Semantic
 
-![Demo Architecture](./architecture.png)
+![Demo Architecture](./architecture-semantic-search.png)
+
+### Architecture - GenAI
+
+![Demo Architecture](./architecture-gen-ai.png)
 
 #### Data Pipeline
 
