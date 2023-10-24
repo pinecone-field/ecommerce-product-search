@@ -1,0 +1,2 @@
+.env*
+./application/node_modules/*

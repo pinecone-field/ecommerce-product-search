@@ -1,0 +1,121 @@
+.button {
+    background-color: #210c43; /* A pleasant green color */
+    border: none; /* No border */
+    color: white; /* White text color */
+    padding: 12px 24px; /* Padding to make the button large enough to be easily tapped or clicked */
+    text-align: center; /* Center align the text */
+    text-decoration: none; /* Remove any underline */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Set font size */
+    margin: 4px 2px; /* Some margin for spacing */
+    cursor: pointer; /* Change the cursor on hover to indicate interactivity */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  /* Button hover effect */
+  .button:hover {
+    background-color: #010003;  /* Slightly darker green color on hover */
+  }
+  
+  /* Optional: Button active (pressed) effect */
+  .button:active {
+    background-color: #010101; /* Even darker green color when active (pressed) */
+    box-shadow: 0 2px #210c43; /* Box shadow for depth effect */
+    transform: translateY(2px); /* Slight vertical movement for a 'pressing' visual */
+  }
+  
+  .chatLog {
+    border: 1px solid #ccc;
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .chatInput {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .footer {
+    margin-top: 20px;
+    font-size: x-small;
+    text-align: center;
+  }
+
+  .resultTitle {
+    font-size: large;
+    font-weight: 800;
+    text-align: left;
+  }
+
+  .hr {
+    background-color: #2d364e;
+    height: 1px;
+    border: none;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .hr2 {
+    background-color: #2d364e;
+    height: 3px;
+    border: none;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .textarea {
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+
+.titleLink {
+  text-decoration: underline;
+  color: blue;
+}
+
+.pre-container {
+  max-width: 800px; /* Set your desired maximum width */
+  overflow-x: auto; /* Add horizontal scrollbar if content overflows */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+pre {
+  white-space: pre-wrap; /* Wrap lines without collapsing white space */
+  word-wrap: break-word; /* Break long words to fit within the container */
+}
+
+.form-container {
+  display: flex; /* Use Flexbox layout */
+  flex-direction: row; /* Align items horizontally */
+  gap: 16px; /* Add spacing between form elements */
+  padding-left: 5px;
+  padding-top: 20px;
+}
+
+label {
+  flex: 1; /* Make labels grow to fill available space equally */
+  padding-right: 10px;
+  font-weight: 600;
+}
+
+input {
+  flex: 2; /* Make input fields grow to fill available space twice as much as labels */
+  width: 162px;
+  font-weight: 300;
+}
+
+
+
+
+
+
+
+ 
+  
