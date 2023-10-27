@@ -20,7 +20,7 @@ export default async (req, res) => {
     const topK = 10;
 
     try {
-      const index = pinecone.index("verizon-products");
+      const index = pinecone.index("product-catalog");
         
       if (isNaN(priceFilter)) {
         const data = await index.query({ topK: topK, vector: embedding, includeMetadata: true, 
