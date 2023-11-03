@@ -54,14 +54,12 @@ There are 2 main components 1) Data Pipeline and 2 ) Application. The data pipel
 
 #### Quickstart
 
-1. Create a `.env` file that has the following entries
+1. [OPTIONAL] Create a `.env` file that has the following entries
 
     ```
     PINECONE_API_KEY="YOUR_API_KEY"
     PINECONE_ENVIRONMENT="YOUR_ENVIRONMENT"
     PINECONE_INDEX_NAME="YOUR_INDEX_NAME"
-    DIMENSIONS="1536"
-    METRIC="cosine"
 
     OPENAI_API_KEY="YOUR_OPEN_API_KEY"
     ```
