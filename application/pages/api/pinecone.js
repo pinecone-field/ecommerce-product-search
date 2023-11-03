@@ -17,7 +17,7 @@ export default async (req, res) => {
     const priceFilter = parseFloat(req.body.price);
     const dateFilter = req.body.dateFilter;
     const unixTimestamp = Date.parse(dateFilter) / 1000;
-    const topK = 10;
+    const topK = 100;
 
     try {
       const index = pinecone.index("product-catalog");

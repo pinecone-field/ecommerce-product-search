@@ -12,6 +12,7 @@ const SearchComponent = () => {
   const [price, setPrice] = useState(1000.00);
   const startDate = new Date('2009-01-01');
   const [selectedDate, setSelectedDate] = useState(startDate);
+  let rowCount = 1;
 
   const handlePineconeQuery = async (embedding, price, selectedDate) => {
     console.log("handle pinecone query");
@@ -130,7 +131,7 @@ const SearchComponent = () => {
   
     return formattedDate;
   };
-    
+  
   return ( 
     <div>
       <div className="form-container">
@@ -170,32 +171,36 @@ const SearchComponent = () => {
           {chatResponse && (
             <div>
               <h3 className='resultTitle'>Search Result - GenAI</h3>
-              <div className='pre-container'>
+              <div className='one-column-container'>
                 <pre>{chatResponse}</pre>
               </div>
-              <hr className='hr2'></hr>
+             
             </div>
           )}
           {pineconeContext && (
           <div>
             <h3 className='resultTitle'>Search Result - Semantic </h3>
-            <ul>
-              {pineconeContext.matches.map((match) => (
-                <li key={match.id}>
-                  <p><b>Supplier: </b> {match.metadata.supplier}</p>
-                  <p><b>Title: </b><a href={match.metadata.img_high} target='_blank' className='titleLink'>{match.metadata.title}</a></p>
-                  <p><b>Short Description: </b> {match.metadata.short_description}</p>
-                  <p><b>Name: </b> {match.metadata.name}</p>
-                  <p><b>ID: </b> {match.metadata.id}</p>
-                  <p><b>Price: </b> {match.metadata.price}</p>
-                  <p><b>Date Released: </b> {convertUnixTimestampToMMDDYYYY(match.metadata.date_released)}</p>
-                  <hr className='hr'></hr>
-                </li>
+              {pineconeContext.matches.map((match) => 
+                (
+                <div className='two-column-container'>
+                  <div key={match.id} className="two-column-item">
+                    <div className="left-column">
+                      <b>{rowCount++}</b>
+                    </div>
+                    <div className="right-column">
+                      <p><b>Supplier: </b> {match.metadata.supplier}</p>
+                      <p><b>Title: </b><a href={match.metadata.img_high} target='_blank' className='titleLink'>{match.metadata.title}</a></p>
+                      <p><b>Short Description: </b> {match.metadata.short_description}</p>
+                      <p><b>Name: </b> {match.metadata.name}</p>
+                      <p><b>ID: </b> {match.metadata.id}</p>
+                      <p><b>Price: </b> {match.metadata.price}</p>
+                      <p><b>Date Released: </b> {convertUnixTimestampToMMDDYYYY(match.metadata.date_released)}</p>
+                    </div>
+                  </div>
+                </div>
               ))}
-            </ul>
           </div>
         )}
-        
       </div>
     </div>
   );

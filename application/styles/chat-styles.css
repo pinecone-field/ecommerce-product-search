@@ -111,6 +111,59 @@ input {
   font-weight: 300;
 }
 
+/* Styles for the container */
+.one-column-container {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Wrap items to the next row if necessary */
+  gap: 20px; /* Add spacing between items */
+  background-color: #f0f0f0; /* Background color for each row */
+  padding: 20px; /* Add padding to each row */
+  border: 1px solid #ccc; /* Add a border around each row */
+  border-radius: 5px; /* Add rounded corners */
+  width: calc(100% - 10px); /* Set the width of each row (minus gap) for a two-column layout */
+  margin-bottom: 5px; /* Add space between rows */
+}
+
+/* Styles for the container */
+.two-column-container {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Wrap items to the next row if necessary */
+  gap: 20px; /* Add spacing between items */
+}
+
+/* Styles for each item (representing a row) */
+.two-column-item {
+  display: flex; /* Use flexbox for layout within each item */
+  flex-direction: row; /* Arrange columns horizontally */
+  background-color: #f0f0f0; /* Background color for each row */
+  padding: 5px; /* Add padding to each row */
+  border: 1px solid #ccc; /* Add a border around each row */
+  border-radius: 5px; /* Add rounded corners */
+  width: calc(100% - 10px); /* Set the width of each row (minus gap) for a two-column layout */
+  margin-bottom: 5px; /* Add space between rows */
+}
+
+/* Styles for the left column */
+.left-column {
+  padding: 5px; /* Add padding to the left column */
+  width: 10%;
+  display: flex;
+  flex-direction: column; /* Stack content vertically within the left column */
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  text-align: center;
+}
+
+/* Styles for the right column */
+.right-column {
+  flex: 1; /* Allow the right column to grow and take up available space */
+  padding: 5px; /* Add padding to the right column */
+  width: 90%;
+}
+
+/* Add additional styles as needed to match your design */
+
+
 
 
 

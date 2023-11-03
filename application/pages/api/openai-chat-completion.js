@@ -40,13 +40,15 @@ export default async (req, res) => {
     req.body.pineconeContext.matches[0].metadata["date_released"] = convertUnixTimestampToMMDDYYYY(req.body.pineconeContext.matches[0].metadata["date_released"]);
 
     const context = JSON.stringify(req.body.pineconeContext.matches[0].metadata);
+    const searchText = req.body.inputValue;
     console.log(context);
     const response = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: [{"role": "system", "content": "You are a helpful assistant."},
-                 {"role": "user", "content": `Please answer the following question: ${req.body.inputValue}`},
-                 {"role": "user", "content": `Using this context: ${context}`},
-                 {"role": "user", "content": "If the context does not provide an answer reply with 'I DO NOT KNOW'"},
+                 {"role": "user", "content": `Please answer this question: ${searchText}`},
+                 {"role": "user", "content": `Using this product record data: ${context}`},
+                 {"role": "user", "content": `Release date is equivalent to 'date_released'`},
+                 {"role": "user", "content": "If record does not match inquiry, reply with '???'"},
                 ],
     });
     
