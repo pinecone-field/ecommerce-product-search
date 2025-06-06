@@ -37,7 +37,7 @@ jupyter_core==5.5.0
 langchain==0.0.327
 langsmith==0.0.54
 llama-hub==0.0.43
-llama-index==0.8.57
+llama-index==0.12.28
 llmsherpa==0.1.2
 loguru==0.7.2
 lz4==4.3.2
