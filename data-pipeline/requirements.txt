@@ -41,7 +41,7 @@ llama-index==0.8.57
 llmsherpa==0.1.2
 loguru==0.7.2
 lz4==4.3.2
-marshmallow==3.20.1
+marshmallow==3.26.2
 matplotlib-inline==0.1.6
 multidict==6.0.4
 mypy-extensions==1.0.0
