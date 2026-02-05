@@ -57,7 +57,7 @@ pexpect==4.8.0
 pinecone-client==2.2.4
 platformdirs==3.11.0
 prompt-toolkit==3.0.39
-protobuf==3.20.3
+protobuf==5.29.6
 psutil==5.9.6
 ptyprocess==0.7.0
 pure-eval==0.2.2
